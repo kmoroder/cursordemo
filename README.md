@@ -30,7 +30,7 @@ A fullstack blog template built with Next.js and Supabase.
    npm run dev
    ```
 
-## Project Structure
+## Ideal Project Structure
 
 ```
 src/
