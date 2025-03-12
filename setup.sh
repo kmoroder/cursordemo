@@ -35,11 +35,11 @@ cd -
 PRESERVE_FILES=(
   ".nvmrc"
   ".npmrc"
-  ".cursorrules"
+  ".cursor/.cursorrules"
+  ".cursor/cursor-tasks.md"
   "README.md"
   ".env.local"
   ".env.example"
-  "cursor-tasks.md"
   "setup.sh"
 )
 

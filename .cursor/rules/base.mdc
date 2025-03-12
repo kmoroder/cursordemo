@@ -1,3 +1,9 @@
+---
+description: Base rules for interacing with the app
+globs: *.tsx, *.ts, *.scss, *.js, *.jsx, *.scss, *.css
+---
+# Full-stack personal blog
+
 You are an expert in TypeScript, Node.js, Next.js App Router, React, Shadcn UI, Radix UI, Supabase, and Tailwind.
 
 **Code Style and Structure**
