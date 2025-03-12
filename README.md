@@ -22,7 +22,10 @@ A fullstack blog template built with Next.js and Supabase.
 1. Clone this repository
 2. Run the initial setup script:
    ```bash
+   nvm use
+
    chmod +x setup.sh
+   
    ./setup.sh
    ```
 3. Start the development server:
