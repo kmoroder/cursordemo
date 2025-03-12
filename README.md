@@ -30,7 +30,7 @@ A fullstack blog template built with Next.js and Supabase.
    npm run dev
    ```
 
-## Getting Started with Cursor
+### Implementing with Cursor
 
 This template is designed to work with the Cursor IDE and its AI agent (composer). To get started:
 
