@@ -3,7 +3,7 @@ set -e
 
 # Colors for better output
 GREEN='\033[0;32m'
-BLUE='\033[0;34m'
+BLUE='\033[1;33;40m'
 NC='\033[0m' # No Color
 
 echo -e "${BLUE}Fullstack Blog Setup (Next.js + Supabase)${NC}"
@@ -35,6 +35,13 @@ CONFIG_FILES=(".nvmrc" ".npmrc" ".cursorrules" "README.md")
 
 # Copy all files from temp directory except for those in CONFIG_FILES
 rsync -av --progress $TEMP_DIR/ ./ --exclude={".git"} --exclude=node_modules
+
+# Step 4: Install Supabase
+echo -e "\n${GREEN}Step 4: Installing Supabase client...${NC}"
+if ! npm --registry=https://registry.npmjs.org/ i @supabase/supabase-js@latest; then
+    echo -e "${BLUE}Initial installation failed. Trying with legacy peer deps...${NC}"
+    npm --registry=https://registry.npmjs.org/ i @supabase/supabase-js@latest --legacy-peer-deps
+fi
 
 # Create environment files
 echo -e "\n${GREEN}Step 5: Creating environment files...${NC}"
