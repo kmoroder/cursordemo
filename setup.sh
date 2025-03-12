@@ -11,13 +11,14 @@ echo "This script will set up your blog project with Next.js and Supabase."
 
 # Step 1: Create a temporary directory for Next.js initialization
 echo -e "\n${GREEN}Step 1: Creating temporary directory for Next.js initialization...${NC}"
-TEMP_DIR=$(mktemp -d)
+TEMP_DIR="temp-nextjs-setup-$(date +%s)"
+mkdir -p $TEMP_DIR
 echo "Temporary directory created at: $TEMP_DIR"
 
 # Step 2: Initialize Next.js in the temporary directory
 echo -e "\n${GREEN}Step 2: Initializing Next.js in temporary directory...${NC}"
 cd $TEMP_DIR
-npx create-next-app@latest . \
+npx --registry=https://registry.npmjs.org/ create-next-app@latest . \
   --typescript \
   --tailwind \
   --eslint \
