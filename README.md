@@ -30,6 +30,29 @@ A fullstack blog template built with Next.js and Supabase.
    npm run dev
    ```
 
+## Getting Started with Cursor
+
+This template is designed to work with the Cursor IDE and its AI agent (composer). To get started:
+
+1. **Run with Cursor Composer**
+   - Open Cursor IDE
+   - Press `Cmd + I` (Mac) or `Ctrl + I` (Windows/Linux) to open the Cursor Composer
+   - Add both `.cursorrules` and `cursor-tasks.md` to the composer context
+   - Use the following prompt:
+     ```
+     Go through each task in the .cursor-tasks file. After you complete each task, 
+     update the file to check off any task. Run builds and commits after each task. 
+     Continue with each task until you have checked off each one. After each story, 
+     do not take a screenshot. If you need more detail about a task, you can gather 
+     relevant files and pass the FULL file to the research agent.
+     ```
+
+2. **Monitor Progress**
+   - The agent will work through each task in order
+   - Tasks will be checked off automatically as they're completed
+   - Commits will be made after each task
+   - You can monitor progress in the cursor-tasks.md file
+
 ## Ideal Project Structure
 
 ```
