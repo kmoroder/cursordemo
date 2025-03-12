@@ -40,7 +40,7 @@ This template is designed to work with the Cursor IDE and its AI agent (composer
 1. **Run with Cursor Composer**
    - Open Cursor IDE
    - Press `Cmd + I` (Mac) or `Ctrl + I` (Windows/Linux) to open the Cursor Composer
-   - Add both `.cursorrules` and `cursor-tasks.md` to the composer context
+   - Add both `.cursor/rules/base.mdc` and `.cursor/tasks/init.md` to the composer context
    - Use the following prompt:
      ```
      Go through each task in the .cursor-tasks file. After you complete each task, 
