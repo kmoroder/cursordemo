@@ -4,9 +4,9 @@ A fullstack blog template built with Next.js and Supabase.
 
 ## Features
 
-- ⚡️ Next.js 14+ with App Router
+- ⚡️ Latest Next.js version and configuration
 - 💾 Supabase for database for storage
-- 🎨 Tailwind CSS for styling
+- 🎨 Tailwind CSS for styling and Shadcn UI for components
 - 📱 Responsive design
 - 🔍 SEO optimized
 
@@ -47,62 +47,34 @@ src/
 │   ├── database.types.ts # Supabase database types
 ```
 
-## Database Setup
+## Database Schema
 
-This template requires the following tables in your Supabase database:
+The template uses the following database schema in Supabase:
 
-1. `posts` - Blog posts
-2. `categories` - Blog categories
+### Categories Table
 
-Run the SQL setup script in your Supabase SQL editor:
+| Column     | Type                    | Description                    |
+|------------|-------------------------|--------------------------------|
+| id         | UUID                    | Primary key (auto-generated)   |
+| name       | TEXT                    | Category name                  |
+| slug       | TEXT                    | Unique URL-friendly identifier |
+| created_at | TIMESTAMP WITH TIME ZONE| Creation timestamp             |
 
-```sql
--- Create tables
-CREATE TABLE categories (
-  id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
-  name TEXT NOT NULL,
-  slug TEXT NOT NULL UNIQUE,
-  created_at TIMESTAMP WITH TIME ZONE DEFAULT now() NOT NULL
-);
+### Posts Table
 
-CREATE TABLE posts (
-  id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
-  title TEXT NOT NULL,
-  slug TEXT NOT NULL UNIQUE,
-  content TEXT,
-  featured_image TEXT,
-  excerpt TEXT,
-  category_id UUID REFERENCES categories(id),
-  published BOOLEAN DEFAULT false,
-  published_at TIMESTAMP WITH TIME ZONE,
-  created_at TIMESTAMP WITH TIME ZONE DEFAULT now() NOT NULL,
-  updated_at TIMESTAMP WITH TIME ZONE DEFAULT now() NOT NULL
-);
-
--- Set up RLS policies
-ALTER TABLE categories ENABLE ROW LEVEL SECURITY;
-ALTER TABLE posts ENABLE ROW LEVEL SECURITY;
-
--- Categories policies
-CREATE POLICY "Categories are viewable by everyone" ON categories
-  FOR SELECT USING (true);
-
-CREATE POLICY "Only authenticated users can create categories" ON categories
-  FOR INSERT WITH CHECK (auth.role() = 'authenticated');
-
--- Posts policies
-CREATE POLICY "Published posts are viewable by everyone" ON posts
-  FOR SELECT USING (published = true);
-
--- Set up realtime
-BEGIN;
-  DROP PUBLICATION IF EXISTS supabase_realtime;
-  CREATE PUBLICATION supabase_realtime FOR TABLE posts, categories;
-COMMIT;
-
--- Set up storage
-INSERT INTO storage.buckets (id, name) VALUES ('blog_images', 'Blog Images');
-```
+| Column         | Type                    | Description                         |
+|---------------|-------------------------|--------------------------------------|
+| id            | UUID                    | Primary key (auto-generated)         |
+| title         | TEXT                    | Post title                           |
+| slug          | TEXT                    | Unique URL-friendly identifier       |
+| content       | TEXT                    | Main post content                    |
+| featured_image| TEXT                    | URL to featured image                |
+| excerpt       | TEXT                    | Short post summary                   |
+| category_id   | UUID                    | Foreign key to categories table      |
+| published     | BOOLEAN                 | Publication status                   |
+| published_at  | TIMESTAMP WITH TIME ZONE| Publication timestamp                |
+| created_at    | TIMESTAMP WITH TIME ZONE| Creation timestamp                   |
+| updated_at    | TIMESTAMP WITH TIME ZONE| Last update timestamp                |
 
 ## Deployment
 
