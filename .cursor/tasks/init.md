@@ -23,13 +23,13 @@ Go through each task in the .cursor-tasks file. After you complete each task, up
 
 ## 2. Set Up Shadcn UI Components
 
-1. [ ] **Install and configure Shadcn UI**
-   - [ ] Run the following commands to set up Shadcn UI:
+1. [x] **Install and configure Shadcn UI**
+   - [x] Run the following commands to set up Shadcn UI:
      ```bash
      npm install @shadcn/ui
      npx shadcn-ui init
      ```
-   - [ ] When prompted, select the following options:
+   - [x] When prompted, select the following options:
      - Style: Default
      - Base color: Slate
      - Global CSS: src/app/globals.css
@@ -39,22 +39,21 @@ Go through each task in the .cursor-tasks file. After you complete each task, up
      - Components directory: src/components
      - Utility directory: src/lib/utils
 
-2. [ ] **Install necessary Shadcn UI components**
-   - [ ] Install the card component:
+2. [x] **Install necessary Shadcn UI components**
+   - [x] Install the card component:
      ```bash
-     npx shadcn@latest init
+     npx shadcn@latest add card
      ```
-   - [ ] Install the button component:
+   - [x] Install the button component:
      ```bash
      npx shadcn@latest add button
      ```
-   - [ ] Install other necessary components:
+   - [x] Install other necessary components:
      ```bash
-     npx shadcn@latest add avatar
-     npx shadcn@latest add badge
-     npx shadcn@latest add separator
+     npx shadcn@latest add avatar badge separator
      ```
 
+3. [x] **Set up global styles**
 3. [ ] **Set up global styles**
    - [ ] Update `src/app/globals.css` to include your custom styling as needed
 
