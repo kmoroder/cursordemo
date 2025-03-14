@@ -152,8 +152,8 @@ Go through each task in the .cursor-tasks file. After you complete each task, up
 
 ## 5. Update the Homepage
 
-1. [ ] **Update the homepage to showcase recent blog posts**
-   - [ ] Update `src/app/page.tsx`:
+1. [x] **Update the homepage to showcase recent blog posts**
+   - [x] Update `src/app/page.tsx`:
 
 ## 6. Create Layout and Navigation
 
