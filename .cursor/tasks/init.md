@@ -248,14 +248,14 @@ Go through each task in the .cursor-tasks file. After you complete each task, up
 
 ## 7. Configure Database and Create Initial Content
 
-1. [ ] **Set up Supabase database**
-   - [ ] Create a new Supabase project if you haven't already:
+1. [x] **Set up Supabase database**
+   - [x] Create a new Supabase project if you haven't already:
      - Go to https://app.supabase.com and sign in
      - Click "New Project"
      - Enter a project name and database password
      - Choose the region closest to you
      - Click "Create new project"
-   - [ ] Run the SQL setup script in the Supabase SQL editor:
+   - [x] Run the SQL setup script in the Supabase SQL editor:
      - In your Supabase project dashboard, click on "SQL Editor" in the left sidebar
      - Click the "New Query" button in the top right corner
      - Paste the entire SQL script below into the editor
@@ -306,15 +306,15 @@ Go through each task in the .cursor-tasks file. After you complete each task, up
      COMMIT;
      ```
 
-2. [ ] **Add initial seed data**
-   - [ ] Create seed data for categories:
+2. [x] **Add initial seed data**
+   - [x] Create seed data for categories:
      ```sql
      INSERT INTO categories (name, slug) VALUES
      ('Technology', 'technology'),
      ('Personal', 'personal'),
      ('Projects', 'projects');
      ```
-   - [ ] Create seed data for a sample blog post:
+   - [x] Create seed data for a sample blog post:
      ```sql
         INSERT INTO posts (
         title,
@@ -336,7 +336,7 @@ Go through each task in the .cursor-tasks file. After you complete each task, up
         now()
         );
      ```
-   - [ ] Add a second blog post for testing:
+   - [x] Add a second blog post for testing:
      ```sql
        INSERT INTO posts (
           title,
