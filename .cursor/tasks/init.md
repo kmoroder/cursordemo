@@ -157,8 +157,8 @@ Go through each task in the .cursor-tasks file. After you complete each task, up
 
 ## 6. Create Layout and Navigation
 
-1. [ ] **Update the root layout**
-   - [ ] Update `src/app/layout.tsx`, this is an example of a root layout:
+1. [x] **Update the root layout**
+   - [x] Update `src/app/layout.tsx`, this is an example of a root layout:
      ```typescript
      import './globals.css';
      import type { Metadata } from 'next';
@@ -195,8 +195,8 @@ Go through each task in the .cursor-tasks file. After you complete each task, up
      }
      ```
 
-2. [ ] **Create header component**
-   - [ ] Create `src/components/header.tsx`, this is an example of a header component:
+2. [x] **Create header component**
+   - [x] Create `src/components/header.tsx`, this is an example of a header component:
      ```typescript
      import Link from 'next/link';
      import { Button } from '@/components/ui/button';
@@ -222,8 +222,8 @@ Go through each task in the .cursor-tasks file. After you complete each task, up
      }
      ```
 
-3. [ ] **Create footer component**
-   - [ ] Create `src/components/footer.tsx`, this is an example of a footer component:
+3. [x] **Create footer component**
+   - [x] Create `src/components/footer.tsx`, this is an example of a footer component:
      ```typescript
      import { Separator } from '@/components/ui/separator';
 
