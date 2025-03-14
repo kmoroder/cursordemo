@@ -59,17 +59,18 @@ Go through each task in the .cursor-tasks file. After you complete each task, up
 
 ## 3. Create Blog UI Components
 
-1. [ ] **Create a markdown renderer component**
-   - [ ] Install necessary packages:
+1. [x] **Create a markdown renderer component**
+   - [x] Install necessary packages:
      ```bash
      npm install react-markdown rehype-raw rehype-sanitize remark-gfm
      ```
-   - [ ] Create `src/components/blog/markdown-renderer.tsx` to render markdown content
+   - [x] Create `src/components/blog/markdown-renderer.tsx` to render markdown content
 
-2. [ ] **Create a blog post card component**
-   - [ ] Create `src/components/blog/post-card.tsx` to render a blog post card
-3. [ ] **Create blog post grid component**
-   - [ ] Create `src/components/blog/post-grid.tsx`, this is an example of a post grid component:
+2. [x] **Create a blog post card component**
+   - [x] Create `src/components/blog/post-card.tsx` to render a blog post card
+
+3. [x] **Create blog post grid component**
+   - [x] Create `src/components/blog/post-grid.tsx`, this is an example of a post grid component:
       ```typescript
       import React from 'react';
       import { PostCard } from './post-card';
@@ -90,8 +91,8 @@ Go through each task in the .cursor-tasks file. After you complete each task, up
       }
       ```
 
-4. [ ] **Create a blog post header component**
-   - [ ] Create `src/components/blog/post-header.tsx`, this is an example of a post header component:
+4. [x] **Create a blog post header component**
+   - [x] Create `src/components/blog/post-header.tsx`, this is an example of a post header component:
      ```typescript
      import React from 'react';
      import Image from 'next/image';
