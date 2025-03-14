@@ -141,14 +141,14 @@ Go through each task in the .cursor-tasks file. After you complete each task, up
 
 ## 4. Implement Blog Pages
 
-1. [ ] **Create the blog listing page**
-   - [ ] Create `src/app/blog/page.tsx` to display all blog posts
+1. [x] **Create the blog listing page**
+   - [x] Create `src/app/blog/page.tsx` to display all blog posts
 
-2. [ ] **Create the blog post detail page**
-   - [ ] Create `src/app/blog/[slug]/page.tsx` to display a single blog post
+2. [x] **Create the blog post detail page**
+   - [x] Create `src/app/blog/[slug]/page.tsx` to display a single blog post
 
-3. [ ] **Create a Not Found page**
-   - [ ] Create `src/app/blog/not-found.tsx`
+3. [x] **Create a Not Found page**
+   - [x] Create `src/app/blog/not-found.tsx`
 
 ## 5. Update the Homepage
 
